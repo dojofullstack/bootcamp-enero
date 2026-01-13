@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #FF00FF;
+    --secondary-color: rgba(179, 24, 218, 0.968);
+    --tertiary-color: rgba(225, 204, 230, 0.968);
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 20px;
+    --text-xl: 24px;
+    --text-2xl: 32px;
+    --text-3xl: 48px;
+    --text-5xl: 64px;
+}
+
+body {
+    font-family: "Playwrite CU", cursive;
+    margin: 0;
+}
+
+.text-xs {
+    font-size: var(--text-xs);
+}
+
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+.text-base {
+    font-size: var(--text-base);
+}
+
+.text-lg {
+    font-size: var(--text-lg);
+}
+
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+.text-2xl {
+    font-size: var(--text-2xl);
+}
+
+.text-3xl {
+    font-size: var(--text-3xl);
+}
+
+.text-5xl {
+    font-size: var(--text-5xl);
+}
+
+/* Para HTML */
+h1 {
+    font-size: var(--text-3xl);
+    font-weight: bold;
+}
+
+h2 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+}
+
+p {
+    font-size: var(--text-base);
+}
+
+small {
+    font-size: var(--text-xs);
+    color: #999;
+}
+
+
+
+button {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    border: none;
+    padding: 10px 20px;
+}
+
+.texto-truncado {
+    border: 2px solid #FF00FF;
+    /* width: 250px;
+    height: 259px; */
+    overflow: auto;
+    /* Oculta contenido que no cabe */
+    /* min-height: 250px;
+    min-width: 100px; */
+    max-width: 300px;
+    max-height: 200px;
+
+}
+
+
+.btn-article {
+    color: black;
+    background-color: orange;
+    border: none;
+    padding: 10px 20px;
+}
+
+.btn {
+  box-shadow: 3px 5px 10px 2px #4f8315;
+}
+
+ul {
+    box-shadow: 4px 2px 10px 6px #31d2a9;
+}
+
+
+h1 {
+    text-shadow: 6px 7px 7px #1c1515fc;
+}
