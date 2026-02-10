@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import useRappi from "../store";
+import { Bounce, ToastContainer, toast } from 'react-toastify';
+import toastHenry, { Toaster } from 'react-hot-toast';
+
 
 
 const API_FOOD = "https://devsapihub.com/api-fast-food"
@@ -375,7 +378,34 @@ const MenuView = () => {
                                 </div>
 
                                 {/* Botón Agregar */}
-                                <button className="btn btn-success text-white px-6" onClick={() => agregarProducto(menuActive)} >
+                                <button className="btn btn-success text-white px-6" onClick={() => {
+                                    agregarProducto(menuActive);
+                                    // lanzar notificacion de que se agregó al carrito
+                                    // toast.success('Producto agregado al carrito');
+
+                                    toast.success('Producto agregado al carrito', {
+                                                position: "top-right",
+                                                autoClose: 5000,
+                                                hideProgressBar: false,
+                                                closeOnClick: false,
+                                                pauseOnHover: true,
+                                                draggable: true,
+                                                progress: undefined,
+                                                theme: "light",
+                                                transition: Bounce,
+                                                });
+
+
+                                    // toastHenry.success('Producto agregado al carrito', {
+                                    //     position: "top-right",
+                                    //     duration: 5000,
+                                    //     hideProgressBar: false,
+                                    //     closeOnClick: true,
+                                    //     pauseOnHover: true,
+                                    //     draggable: true,
+                                    //     progress: undefined,
+                                    // });
+                                  }  } >
                                     Agregar $ {(
                                         (menuActive.price + (acompañamiento === "Con Papas Fritas" ? 11 : 0)) * cantidad
                                     ).toFixed(2)}
@@ -388,6 +418,9 @@ const MenuView = () => {
                     <button>close</button>
                 </form>
             </dialog>
+
+                <ToastContainer />
+                <Toaster />
         </div>
     );
 }
